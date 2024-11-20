@@ -1,7 +1,0 @@
-@import "./theme/index.css";
-@import "./theme-base.css";
-
-html {
-    background-color: var(--bg);
-    color: var(--text);
-}
