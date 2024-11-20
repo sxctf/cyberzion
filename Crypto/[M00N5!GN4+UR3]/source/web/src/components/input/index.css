@@ -1,0 +1,24 @@
+.container {
+    height: 32px;
+    padding: 0 12px;
+    border: 1px solid var(--c-cool-gray-1);
+    border-radius: 4px;
+    outline: none;
+    font-size: 16px;
+    background-color: var(--c-white);
+    color: var(--c-cool-gray-9);
+    text-overflow: ellipsis;
+    transition: border-color var(--animation);
+
+    &:hover {
+        border: 1px solid var(--c-cool-gray-2);
+    }
+
+    &:focus {
+        border: 1px solid var(--c-cool-gray-3);
+    }
+
+    &::placeholder {
+        color: var(--c-cool-gray-3);
+    }
+}

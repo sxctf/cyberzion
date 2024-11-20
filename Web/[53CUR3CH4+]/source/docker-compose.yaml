@@ -1,0 +1,14 @@
+services:
+  secure_chat:
+    container_name: secure_chat
+    cap_add:
+      - SYS_ADMIN
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      PORT: 8004
+    entrypoint: node index.js
+    restart: unless-stopped
+    ports:
+      - '8004:8004'

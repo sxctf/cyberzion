@@ -1,0 +1,10 @@
+services:
+  crc32_challenge:
+    container_name: crc32_challenge
+    build:
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: python3 -m app.main
+    restart: unless-stopped
+    ports:
+      - '8001:8000'

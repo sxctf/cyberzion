@@ -1,0 +1,9 @@
+{
+    "name": "ctf-task-watermark",
+    "version": "1.0.0",
+    "dependencies": {
+        "express": "4.19.2",
+        "mmmagic": "0.5.3",
+        "multer": "1.4.5-lts.1"
+    }
+}

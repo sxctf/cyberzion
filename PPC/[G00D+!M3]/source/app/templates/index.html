@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF: Капча что, правда круглая?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        #captcha-image {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        form {
+            margin-top: 20px;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            max-width: 200px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .error {
+            color: #d32f2f;
+            background-color: #fde8e8;
+            border: 1px solid #fad2d2;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .success {
+            color: #388e3c;
+            background-color: #e8f5e9;
+            border: 1px solid #c8e6c9;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .hint {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+    <script>
+        function startSSE() {
+            const evtSource = new EventSource("/captchas-stream");
+
+            evtSource.onmessage = function(event) {
+                const captchaFile = event.data;
+                document.getElementById("captcha-image").src = `/static/${captchaFile}`;
+            };
+
+            evtSource.onerror = function(err) {
+                console.error("EventSource failed:", err);
+                evtSource.close();
+            };
+        }
+
+        window.onload = startSSE;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Капча что, правда круглая?</h1>
+        <img id="captcha-image" src="{{ captcha_path }}" alt="CAPTCHA">
+        <form method="post">
+            <label for="time_input">Введите время (ЧЧ:ММ):</label>
+            <input type="text" id="time_input" name="time_input" required
+                   pattern="(0[0-9]|1[0-1]):[0-5][0-9]"
+                   placeholder="например, 05:30"
+                   title="Введите время в формате ЧЧ:ММ (часы от 00 до 11)">
+            <div class="hint">Часы должны быть от 00 до 11, минуты от 00 до 59</div>
+            <div class="hint">Лимит 2 запроса в минуту</div>
+            <button type="submit">Отправить</button>
+        </form>
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+        {% if success %}
+        <div class="success">{{ success }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>

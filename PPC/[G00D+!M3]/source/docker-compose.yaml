@@ -1,0 +1,10 @@
+services:
+  good_time:
+    container_name: good_time
+    build:
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: python3 -m app.main
+    restart: unless-stopped
+    ports:
+      - '8002:8000'

@@ -1,0 +1,14 @@
+{
+    "name": "ctf-task-secure-chat",
+    "version": "1.0.0",
+    "private": true,
+    "dependencies": {
+        "@babel/runtime": "7.25.9",
+        "body-parser": "1.20.3",
+        "cookie-parser": "1.4.7",
+        "cors": "2.8.5",
+        "express": "4.21.1",
+        "express-ws": "5.0.2",
+        "uuid": "10.0.0"
+    }
+}

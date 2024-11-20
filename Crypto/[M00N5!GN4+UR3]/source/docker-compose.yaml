@@ -1,0 +1,10 @@
+services:
+  moon_signature:
+    container_name: moon_signature
+    build:
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: waitress-serve --port=8080 --call server:create_app
+    restart: unless-stopped
+    ports:
+      - '8003:8080'

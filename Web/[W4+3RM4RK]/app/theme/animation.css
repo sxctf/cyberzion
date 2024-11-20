@@ -1,0 +1,7 @@
+:root {
+    --animation-duration: 0.24s;
+    --animation-duration-fast: 0.12s;
+    --animation-timing-function: cubic-bezier(0.24, 0.1, 0.24, 1);
+    --animation: var(--animation-duration) var(--animation-timing-function);
+    --animation-fast: var(--animation-duration-fast) var(--animation-timing-function);
+}

@@ -1,0 +1,14 @@
+@import './animation.css';
+@import './colors.css';
+@import './typography.css';
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font: var(--t-16);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

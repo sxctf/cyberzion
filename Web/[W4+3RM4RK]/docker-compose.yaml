@@ -1,0 +1,10 @@
+services:
+  watermark:
+    container_name: watermark
+    build:
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: node index.js
+    restart: unless-stopped
+    ports:
+      - '8005:8080'

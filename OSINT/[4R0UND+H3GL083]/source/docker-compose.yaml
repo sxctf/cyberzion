@@ -1,0 +1,17 @@
+services:
+  globe:
+    container_name: globe
+    build:
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: '/bin/bash -c "python3 generate.py && python3 solve.py"'
+    volumes:
+      - type: bind
+        source: ./src/flag.txt
+        target: /ctf/flag.txt
+      - type: bind
+        source: ./src/generate.py
+        target: /ctf/generate.py
+      - type: bind
+        source: ./solution/solve.py
+        target: /ctf/solve.py

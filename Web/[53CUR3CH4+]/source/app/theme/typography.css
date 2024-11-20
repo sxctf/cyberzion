@@ -1,0 +1,28 @@
+:root {
+    --ff-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Helvetica Neue', Arial, sans-serif;
+
+    --t-48: 900 48px / 56px var(--ff-system);
+    --t-32: 700 32px / 40px var(--ff-system);
+    --t-24: 700 24px / 32px var(--ff-system);
+
+    --t-20: 20px / 28px var(--ff-system);
+    --t-16: 16px / 24px var(--ff-system);
+    --t-14: 14px / 20px var(--ff-system);
+    --t-12: 12px / 18px var(--ff-system);
+    --t-10: 10px / 14px var(--ff-system);
+}
+
+h1 {
+    margin: 0;
+    font: var(--t-48);
+}
+
+h2 {
+    margin: 0;
+    font: var(--t-32);
+}
+
+h3 {
+    margin: 0;
+    font: var(--t-24);
+}

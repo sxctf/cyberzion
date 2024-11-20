@@ -1,0 +1,18 @@
+.nav {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--c-cool-gray-1);
+}
+
+.link {
+    padding: 12px;
+    border-radius: 8px 8px 0 0;
+    transition: background-color var(--animation);
+
+    &:hover,
+    &.active {
+        background-color: var(--c-cool-gray-1);
+    }
+}

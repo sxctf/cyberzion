@@ -1,0 +1,19 @@
+:root {
+    --c-white: #FAFCFF;
+    --c-white-0: rgb(255 255 255 / 0%);
+
+    --c-cool-gray-1: #EFF0F1;
+    --c-cool-gray-2: #DFE2E4;
+    --c-cool-gray-3: #BFC5CA;
+    --c-cool-gray-4: #A0A8B0;
+    --c-cool-gray-5: #808B95;
+    --c-cool-gray-6: #616E7C;
+    --c-cool-gray-7: #4D5862;
+    --c-cool-gray-8: #3A424A;
+    --c-cool-gray-9: #262C31;
+    --c-cool-gray-10: #131618;
+
+    --c-red: #E54E6D;
+    --c-green: #10BF6A;
+    --c-blue: #1F1FA1;
+}

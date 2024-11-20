@@ -1,0 +1,42 @@
+.container {
+    position: relative;
+    cursor: pointer;
+}
+
+.input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    z-index: -1;
+}
+
+.label {
+    margin-bottom: 4px;
+    font: var(--t-16);
+}
+
+.preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    min-height: 80px;
+    border-radius: 8px;
+    background-color: var(--c-gray-8);
+    color: var(--c-gray-3);
+    border: 1px dashed var(--c-gray-3);
+    overflow: hidden;
+    transition: background-color var(--animation);
+
+    &.filled {
+        border-style: solid;
+    }
+
+    &:hover {
+        background-color: var(--c-gray-7);
+    }
+}
+
+.image {
+    width: 100%;
+}

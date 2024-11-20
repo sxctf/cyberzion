@@ -1,0 +1,11 @@
+@import "../../../theme/index.css";
+
+.container {
+    display: inline-flex;
+    align-items: center;
+}
+
+.svg {
+    width: 100%;
+    height: 100%;
+}

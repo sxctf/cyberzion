@@ -1,0 +1,19 @@
+@import './animation.css';
+@import './colors.css';
+@import './fonts.css';
+
+:root {
+    --ff-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Helvetica Neue', Arial, sans-serif;
+    --ff-hand: Caveat, sans-serif;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font: 16px / 24px var(--ff-system);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
