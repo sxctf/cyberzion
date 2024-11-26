@@ -1,0 +1,109 @@
+.container > * { 
+    display: inline-block; 
+    width: 42%;
+    height: 50%;
+    padding: 100px; 
+    margin: 0;
+    border: 1px solid rgb(151, 87, 5);
+    text-align: center;
+    text-size-adjust: auto;
+    color: #FFEDDF;
+    background-color: rgb(192, 112, 8);
+}
+
+p {
+    color: #FFEDDF;
+    margin: 0;
+}
+
+a {
+    display: block;
+    font-size: 30px;
+    color: #FFEDDF;
+    margin: 0;
+  }
+  a:link {
+    color: #FFEDDF;
+  }
+  a:visited {
+    color: #FFEDDF;
+  }
+  a:hover {
+    color: #FFEDDF;
+  }
+  a:active {
+    color: #FFEDDF;
+  }
+
+.footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: #083fbf;
+    color: #FFEDDF;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 45px;
+  }
+
+  .infoText {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0D1321;
+    color: #FFEDDF;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    text-align: center;
+    margin: auto;
+  }
+
+  .reality {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #FFEDDF;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    text-align: center;
+    margin: auto;
+    margin-top: auto;
+    background-image: url('reality.jpeg');
+    background-size: cover; 
+  }
+
+  .ovechka{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #FFEDDF;
+    font-size: 50px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    text-align: center;
+    margin: auto;
+    margin-top: auto;
+    background-image: url('Ovechka.webp');
+    background-size: cover; 
+  }

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{url_for('static',filename='main.css')}}">
+<body>
+    <div class="inner">
+        <div class="infoText">
+          <span> 
+              <pre></pre>
+              <pre> Ты близок к выходу </pre>
+              <pre> 
+                <form method="POST">
+                    <input type= "submit" name="Choice">
+                    <input id = "pill_button" name="pill_button">
+                </form> 
+              </pre>
+              <pre>{{ data }}</pre>
+              <pre></pre>
+          </span>
+        </div>
+    </div>
+</body>

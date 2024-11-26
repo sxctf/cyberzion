@@ -1,0 +1,9 @@
+services:
+  server:
+    restart: always
+    build:
+      context: .
+    ports:
+      - 11000:11000
+    volumes:
+      - ./logs:/app/logs

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>RedService</title>
+    <link rel="stylesheet" type="text/css" href="../static/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  </head>
+  <body>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+    </style>
+    <footer>
+      <div class="footer">&copy;<span> СyberZion - [RedService] </span></div>
+    </footer>
+    
+    <h1>[R3D] – You've Crossed The Walls</h1>
+    
+    <div class="Screen"></div>
+    
+    <div class="DivClass">
+      <span class="MatrixTextEffect">{
+        <span class="Pulse">Input Frequency</span>
+      }</span>  
+    </div>
+    <span class="Pulse"></span>  
+    
+    <div class="formblock">
+      <form id="checkCapsuleForm" method="post" action="/backdoor">
+        <input type="text" name="frequency" placeholder="Example: FREC_gtlcQY7kLIzyt62YXB2LfEFXUzf7VZF5 or FREC_yLYI981Dgg8wfGT3MWy8H0mMJyy3qQq1" autocomplete="off"/>
+        <button type="submit">Send Request</button>
+      </form>
+    </div>
+    <script src="../static/check.js"></script>
+    <br><br>
+    <table class="table" id="myTable">
+      <thead>
+         <tr>
+           <th scope="col">Id</th>
+           <th scope="col">Name</th>
+           <th scope="col">Frequency</th>
+           <th scope="col">SecretCode</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+         </tr>
+       </tbody>
+    </table>
+  </body>
+</html>
